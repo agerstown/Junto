@@ -81,6 +81,8 @@ extension ProductsListViewController: UITableViewDataSource {
         let product = products[indexPath.row]
         
         let cell = tableViewProducts.dequeue(ProductCell.self)
+        cell.imageViewThumbnail.image = #imageLiteral(resourceName: "default_product")
+        ImagesManager.shared.loadImage(withURL: product.thumbnailLink, intoImageView: cell.imageViewThumbnail)
         cell.labelName.text = product.name
         cell.labelTagline.text = product.tagline
         cell.labelVotesCount.text = String(product.votesCount)

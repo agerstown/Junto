@@ -18,6 +18,7 @@
 		618EC7A21F3B70440016CE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618EC7A01F3B70440016CE65 /* LaunchScreen.storyboard */; };
 		618EC7AF1F3B71720016CE65 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7AE1F3B71720016CE65 /* ProductViewController.swift */; };
 		618EC7B11F3B718D0016CE65 /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */; };
+		61F79EA41F3BA1FF00233549 /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F79EA31F3BA1FF00233549 /* ImagesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		618EC7A31F3B70440016CE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618EC7AE1F3B71720016CE65 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductViewController.swift; path = Junto/Products/ProductViewController.swift; sourceTree = SOURCE_ROOT; };
 		618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductsListViewController.swift; path = ../Products/ProductsListViewController.swift; sourceTree = "<group>"; };
+		61F79EA31F3BA1FF00233549 /* ImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
 		E7A9F4D7D9C46CC6567596D0 /* Pods-Junto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				615F97781F3B752F00525B82 /* ProductsApiManager.swift */,
+				61F79EA31F3BA1FF00233549 /* ImagesManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				615F977D1F3B8E2D00525B82 /* ProductCell.swift in Sources */,
 				618EC7B11F3B718D0016CE65 /* ProductsListViewController.swift in Sources */,
 				615F977B1F3B88B700525B82 /* Post.swift in Sources */,
+				61F79EA41F3BA1FF00233549 /* ImagesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

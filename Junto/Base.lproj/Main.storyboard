@@ -43,28 +43,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="100" id="0Mg-MW-Flw" customClass="ProductCell" customModule="Junto" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="100" id="0Mg-MW-Flw" customClass="ProductCell" customModule="Junto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Mg-MW-Flw" id="8D8-jF-72R">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8w5-Kn-APl">
-                                                    <rect key="frame" x="16" y="12" width="75.5" height="75.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8w5-Kn-APl">
+                                                    <rect key="frame" x="16" y="12" width="57" height="75.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="8w5-Kn-APl" secondAttribute="height" multiplier="1:1" id="U3z-6T-y8J"/>
-                                                        <constraint firstAttribute="height" constant="75.5" id="Uac-fW-tpk"/>
+                                                        <constraint firstAttribute="width" secondItem="8w5-Kn-APl" secondAttribute="height" multiplier="43:57" id="13d-t5-7ff"/>
+                                                        <constraint firstAttribute="height" constant="75.5" id="EJx-73-Cqs"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="pZQ-Id-6Fu">
-                                                    <rect key="frame" x="107.5" y="16" width="243.5" height="20.5"/>
+                                                    <rect key="frame" x="89" y="16" width="262" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-cs-XtD">
-                                                    <rect key="frame" x="107" y="48.5" width="196" height="18"/>
+                                                    <rect key="frame" x="88.5" y="48.5" width="214.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>

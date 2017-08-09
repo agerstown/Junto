@@ -49,6 +49,7 @@ class ProductsApiManager {
                     let tagline = post["tagline"].stringValue
                     let votesCount = post["votes_count"].intValue
                     let thumbnailLink = post["thumbnail"]["image_url"].stringValue
+                    print(thumbnailLink)
                     
                     let postObj = Post(name: name, tagline: tagline, votesCount: votesCount, thumbnailLink: thumbnailLink)
                     posts.append(postObj)
