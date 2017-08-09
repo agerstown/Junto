@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B8CA0C6ACDBFC8554FE77F8 /* Pods_Junto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6B4D0961A014D1C595BD15 /* Pods_Junto.framework */; };
+		615F97791F3B752F00525B82 /* ProductsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F97781F3B752F00525B82 /* ProductsApiManager.swift */; };
+		615F977B1F3B88B700525B82 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977A1F3B88B700525B82 /* Post.swift */; };
+		615F977D1F3B8E2D00525B82 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977C1F3B8E2D00525B82 /* ProductCell.swift */; };
+		615F97801F3B90E300525B82 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */; };
+		618EC7981F3B70430016CE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7971F3B70430016CE65 /* AppDelegate.swift */; };
+		618EC79D1F3B70440016CE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618EC79B1F3B70440016CE65 /* Main.storyboard */; };
+		618EC79F1F3B70440016CE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618EC79E1F3B70440016CE65 /* Assets.xcassets */; };
+		618EC7A21F3B70440016CE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618EC7A01F3B70440016CE65 /* LaunchScreen.storyboard */; };
+		618EC7AF1F3B71720016CE65 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7AE1F3B71720016CE65 /* ProductViewController.swift */; };
+		618EC7B11F3B718D0016CE65 /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B6B4D0961A014D1C595BD15 /* Pods_Junto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Junto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EF63CEA0A6A1F8D04DDA629 /* Pods-Junto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.debug.xcconfig"; sourceTree = "<group>"; };
+		615F97781F3B752F00525B82 /* ProductsApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsApiManager.swift; sourceTree = "<group>"; };
+		615F977A1F3B88B700525B82 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		615F977C1F3B8E2D00525B82 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		618EC7941F3B70430016CE65 /* Junto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		618EC7971F3B70430016CE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		618EC79C1F3B70440016CE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		618EC79E1F3B70440016CE65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		618EC7A11F3B70440016CE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		618EC7A31F3B70440016CE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		618EC7AE1F3B71720016CE65 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
+		E7A9F4D7D9C46CC6567596D0 /* Pods-Junto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		618EC7911F3B70430016CE65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8CA0C6ACDBFC8554FE77F8 /* Pods_Junto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		110F542210CA9077958F8B96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EF63CEA0A6A1F8D04DDA629 /* Pods-Junto.debug.xcconfig */,
+				E7A9F4D7D9C46CC6567596D0 /* Pods-Junto.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1D7BC37673EA83CA7940922A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B6B4D0961A014D1C595BD15 /* Pods_Junto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		615F97771F3B74E000525B82 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				615F97781F3B752F00525B82 /* ProductsApiManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		615F977E1F3B90BE00525B82 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		618EC78B1F3B70430016CE65 = {
+			isa = PBXGroup;
+			children = (
+				618EC7961F3B70430016CE65 /* Junto */,
+				618EC7951F3B70430016CE65 /* Products */,
+				110F542210CA9077958F8B96 /* Pods */,
+				1D7BC37673EA83CA7940922A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		618EC7951F3B70430016CE65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				618EC7941F3B70430016CE65 /* Junto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		618EC7961F3B70430016CE65 /* Junto */ = {
+			isa = PBXGroup;
+			children = (
+				618EC7AB1F3B71400016CE65 /* Products */,
+				618EC7A91F3B70940016CE65 /* Model */,
+				615F97771F3B74E000525B82 /* Helpers */,
+				618EC7AA1F3B70A90016CE65 /* Storyboards */,
+				615F977E1F3B90BE00525B82 /* Extensions */,
+				618EC7971F3B70430016CE65 /* AppDelegate.swift */,
+				618EC79E1F3B70440016CE65 /* Assets.xcassets */,
+				618EC7A31F3B70440016CE65 /* Info.plist */,
+			);
+			path = Junto;
+			sourceTree = "<group>";
+		};
+		618EC7A91F3B70940016CE65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				615F977A1F3B88B700525B82 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		618EC7AA1F3B70A90016CE65 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				618EC79B1F3B70440016CE65 /* Main.storyboard */,
+				618EC7A01F3B70440016CE65 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		618EC7AB1F3B71400016CE65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				618EC7AE1F3B71720016CE65 /* ProductViewController.swift */,
+				618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */,
+				615F977C1F3B8E2D00525B82 /* ProductCell.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		618EC7931F3B70430016CE65 /* Junto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 618EC7A61F3B70440016CE65 /* Build configuration list for PBXNativeTarget "Junto" */;
+			buildPhases = (
+				64D5099678B3F9B6B94A798B /* [CP] Check Pods Manifest.lock */,
+				618EC7901F3B70430016CE65 /* Sources */,
+				618EC7911F3B70430016CE65 /* Frameworks */,
+				618EC7921F3B70430016CE65 /* Resources */,
+				D08607189255D60E9F9FD528 /* [CP] Embed Pods Frameworks */,
+				9641E36EBDA0BCB03F4D8644 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Junto;
+			productName = Junto;
+			productReference = 618EC7941F3B70430016CE65 /* Junto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		618EC78C1F3B70430016CE65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Natalia Nikitina";
+				TargetAttributes = {
+					618EC7931F3B70430016CE65 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5H72FC97K4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 618EC78F1F3B70430016CE65 /* Build configuration list for PBXProject "Junto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 618EC78B1F3B70430016CE65;
+			productRefGroup = 618EC7951F3B70430016CE65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				618EC7931F3B70430016CE65 /* Junto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		618EC7921F3B70430016CE65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				618EC7A21F3B70440016CE65 /* LaunchScreen.storyboard in Resources */,
+				618EC79F1F3B70440016CE65 /* Assets.xcassets in Resources */,
+				618EC79D1F3B70440016CE65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64D5099678B3F9B6B94A798B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9641E36EBDA0BCB03F4D8644 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Junto/Pods-Junto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D08607189255D60E9F9FD528 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Junto/Pods-Junto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		618EC7901F3B70430016CE65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615F97791F3B752F00525B82 /* ProductsApiManager.swift in Sources */,
+				615F97801F3B90E300525B82 /* UITableView+Extensions.swift in Sources */,
+				618EC7AF1F3B71720016CE65 /* ProductViewController.swift in Sources */,
+				618EC7981F3B70430016CE65 /* AppDelegate.swift in Sources */,
+				615F977D1F3B8E2D00525B82 /* ProductCell.swift in Sources */,
+				618EC7B11F3B718D0016CE65 /* ProductsListViewController.swift in Sources */,
+				615F977B1F3B88B700525B82 /* Post.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		618EC79B1F3B70440016CE65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				618EC79C1F3B70440016CE65 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		618EC7A01F3B70440016CE65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				618EC7A11F3B70440016CE65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		618EC7A41F3B70440016CE65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		618EC7A51F3B70440016CE65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		618EC7A71F3B70440016CE65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF63CEA0A6A1F8D04DDA629 /* Pods-Junto.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5H72FC97K4;
+				INFOPLIST_FILE = Junto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = agerstown.Junto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		618EC7A81F3B70440016CE65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A9F4D7D9C46CC6567596D0 /* Pods-Junto.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5H72FC97K4;
+				INFOPLIST_FILE = Junto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = agerstown.Junto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		618EC78F1F3B70430016CE65 /* Build configuration list for PBXProject "Junto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618EC7A41F3B70440016CE65 /* Debug */,
+				618EC7A51F3B70440016CE65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		618EC7A61F3B70440016CE65 /* Build configuration list for PBXNativeTarget "Junto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				618EC7A71F3B70440016CE65 /* Debug */,
+				618EC7A81F3B70440016CE65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 618EC78C1F3B70430016CE65 /* Project object */;
+}
