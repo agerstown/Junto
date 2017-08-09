@@ -25,7 +25,7 @@
 		0EF63CEA0A6A1F8D04DDA629 /* Pods-Junto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.debug.xcconfig"; sourceTree = "<group>"; };
 		615F97781F3B752F00525B82 /* ProductsApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsApiManager.swift; sourceTree = "<group>"; };
 		615F977A1F3B88B700525B82 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		615F977C1F3B8E2D00525B82 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		615F977C1F3B8E2D00525B82 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = ../Products/ProductCell.swift; sourceTree = "<group>"; };
 		615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		618EC7941F3B70430016CE65 /* Junto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618EC7971F3B70430016CE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,8 +33,8 @@
 		618EC79E1F3B70440016CE65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618EC7A11F3B70440016CE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618EC7A31F3B70440016CE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		618EC7AE1F3B71720016CE65 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
+		618EC7AE1F3B71720016CE65 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductViewController.swift; path = Junto/Products/ProductViewController.swift; sourceTree = SOURCE_ROOT; };
+		618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductsListViewController.swift; path = ../Products/ProductsListViewController.swift; sourceTree = "<group>"; };
 		E7A9F4D7D9C46CC6567596D0 /* Pods-Junto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +104,8 @@
 		618EC7961F3B70430016CE65 /* Junto */ = {
 			isa = PBXGroup;
 			children = (
-				618EC7AB1F3B71400016CE65 /* Products */,
+				61F79EA11F3BA03800233549 /* Products List */,
+				61F79EA21F3BA06600233549 /* Product */,
 				618EC7A91F3B70940016CE65 /* Model */,
 				615F97771F3B74E000525B82 /* Helpers */,
 				618EC7AA1F3B70A90016CE65 /* Storyboards */,
@@ -133,14 +134,21 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		618EC7AB1F3B71400016CE65 /* Products */ = {
+		61F79EA11F3BA03800233549 /* Products List */ = {
 			isa = PBXGroup;
 			children = (
-				618EC7AE1F3B71720016CE65 /* ProductViewController.swift */,
 				618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */,
 				615F977C1F3B8E2D00525B82 /* ProductCell.swift */,
 			);
-			path = Products;
+			path = "Products List";
+			sourceTree = "<group>";
+		};
+		61F79EA21F3BA06600233549 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				618EC7AE1F3B71720016CE65 /* ProductViewController.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

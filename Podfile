@@ -4,5 +4,5 @@ target ‘Junto’ do
   use_frameworks!
 	pod 'Alamofire'
 	pod 'SwiftyJSON'
-	pod 'BTNavigationDropdownMenu'
+	pod 'BTNavigationDropdownMenu', :git => 'https://github.com/PhamBaTho/BTNavigationDropdownMenu.git', :branch => 'swift-3.0'
 end

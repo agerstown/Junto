@@ -15,6 +15,8 @@ enum Categories: String {
     case games
     case podcasts
     case books
+    
+    static let all = [tech, games, podcasts, books]
 }
 
 class ProductsApiManager {

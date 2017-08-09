@@ -5,14 +5,24 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - BTNavigationDropdownMenu
+  - BTNavigationDropdownMenu (from `https://github.com/PhamBaTho/BTNavigationDropdownMenu.git`, branch `swift-3.0`)
   - SwiftyJSON
+
+EXTERNAL SOURCES:
+  BTNavigationDropdownMenu:
+    :branch: swift-3.0
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
+
+CHECKOUT OPTIONS:
+  BTNavigationDropdownMenu:
+    :commit: e11a720322afc8baa02b3ff63fcc630e4f9de577
+    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   BTNavigationDropdownMenu: 093f3cbfad1572f2c222bdf8d17584d1e13380d4
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 71ff09553ce2d0b747e3c841c1419e3695d9aeda
+PODFILE CHECKSUM: 00beaead20f39aeea204225352528e9545501f58
 
 COCOAPODS: 1.2.0.beta.1
