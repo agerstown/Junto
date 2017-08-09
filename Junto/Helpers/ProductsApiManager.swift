@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-enum Categories: String {
+enum Category: String {
     case tech
     case games
     case podcasts
@@ -27,7 +27,7 @@ class ProductsApiManager {
     let token = "591f99547f569b05ba7d8777e2e0824eea16c440292cce1f8dfb3952cc9937ff"
     
     // MARK: - GET methods
-    func getProducts(category: Categories, completion: @escaping (_ posts: [Post]) -> Void) {
+    func getProducts(category: Category, completion: @escaping (_ posts: [Post]) -> Void) {
 
         let parameters: Parameters = [
             "days_ago": 0

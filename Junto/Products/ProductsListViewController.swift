@@ -15,10 +15,14 @@ class ProductsListViewController: UIViewController {
     
     var products: [Post] = []
     
-    let categories = [Categories.tech.rawValue, Categories.games.rawValue,
-                      Categories.podcasts.rawValue, Categories.books.rawValue]
+    let categories = [Category.tech.rawValue, Category.games.rawValue,
+                      Category.podcasts.rawValue, Category.books.rawValue]
     
     let activityIndicatorInitialLoading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    
+    let refreshControl = UIRefreshControl()
+    
+    var selectedCategory: Category = .tech
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -32,10 +36,9 @@ class ProductsListViewController: UIViewController {
         self.navigationItem.titleView = menuView
         
         menuView.didSelectItemAtIndexHandler = { (indexPath: Int) -> () in
+            self.selectedCategory = Category.all[indexPath]
             self.startSpinning()
-            ProductsApiManager.shared.getProducts(category: Categories.all[indexPath]) { posts in
-                self.products = posts
-                self.tableViewProducts.reloadData()
+            self.updateProducts(category: self.selectedCategory) {
                 self.stopSpinning()
             }
         }
@@ -45,10 +48,11 @@ class ProductsListViewController: UIViewController {
         
         tableViewProducts.tableFooterView = UIView()
         
+        refreshControl.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
+        tableViewProducts.refreshControl = refreshControl
+        
         startSpinning()
-        ProductsApiManager.shared.getProducts(category: Categories.tech) { posts in
-            self.products = posts
-            self.tableViewProducts.reloadData()
+        updateProducts(category: Category.tech) {
             self.stopSpinning()
         }
     }
@@ -68,6 +72,20 @@ class ProductsListViewController: UIViewController {
         tableViewProducts.isHidden = false
     }
 
+    // MARK: - Data updates
+    func updateProducts(category: Category, completion: @escaping () -> Void) {
+        ProductsApiManager.shared.getProducts(category: category) { posts in
+            self.products = posts
+            self.tableViewProducts.reloadData()
+            completion()
+        }
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        updateProducts(category: selectedCategory) {
+            refreshControl.endRefreshing()
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
