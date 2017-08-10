@@ -35,11 +35,9 @@ class ProductViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func buttonGetItTapped(_ sender: Any) {
-        if let product = product {
-            if let url = URL(string: product.redirectURL) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
+        guard let product = product else { return }
+        guard let url = URL(string: product.redirectURL) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
 }

@@ -13,11 +13,11 @@
 		615F977D1F3B8E2D00525B82 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977C1F3B8E2D00525B82 /* ProductCell.swift */; };
 		615F97801F3B90E300525B82 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */; };
 		618EC7981F3B70430016CE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7971F3B70430016CE65 /* AppDelegate.swift */; };
-		618EC79D1F3B70440016CE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618EC79B1F3B70440016CE65 /* Main.storyboard */; };
 		618EC79F1F3B70440016CE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618EC79E1F3B70440016CE65 /* Assets.xcassets */; };
-		618EC7A21F3B70440016CE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618EC7A01F3B70440016CE65 /* LaunchScreen.storyboard */; };
 		618EC7AF1F3B71720016CE65 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7AE1F3B71720016CE65 /* ProductViewController.swift */; };
 		618EC7B11F3B718D0016CE65 /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */; };
+		61980E451F3CEC82004BF6AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61980E441F3CEC82004BF6AC /* LaunchScreen.storyboard */; };
+		61980E471F3CEC8C004BF6AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61980E461F3CEC8C004BF6AC /* Main.storyboard */; };
 		61F79EA41F3BA1FF00233549 /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F79EA31F3BA1FF00233549 /* ImagesManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,16 +26,16 @@
 		0EF63CEA0A6A1F8D04DDA629 /* Pods-Junto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.debug.xcconfig"; sourceTree = "<group>"; };
 		615F97781F3B752F00525B82 /* ProductsApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsApiManager.swift; sourceTree = "<group>"; };
 		615F977A1F3B88B700525B82 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		615F977C1F3B8E2D00525B82 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = ../Products/ProductCell.swift; sourceTree = "<group>"; };
+		615F977C1F3B8E2D00525B82 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		618EC7941F3B70430016CE65 /* Junto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618EC7971F3B70430016CE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		618EC79C1F3B70440016CE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		618EC79E1F3B70440016CE65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		618EC7A11F3B70440016CE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618EC7A31F3B70440016CE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		618EC7AE1F3B71720016CE65 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductViewController.swift; path = Junto/Products/ProductViewController.swift; sourceTree = SOURCE_ROOT; };
-		618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductsListViewController.swift; path = ../Products/ProductsListViewController.swift; sourceTree = "<group>"; };
+		618EC7AE1F3B71720016CE65 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductViewController.swift; path = Junto/Product/ProductViewController.swift; sourceTree = SOURCE_ROOT; };
+		618EC7B01F3B718D0016CE65 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
+		61980E441F3CEC82004BF6AC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61980E461F3CEC8C004BF6AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		61F79EA31F3BA1FF00233549 /* ImagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
 		E7A9F4D7D9C46CC6567596D0 /* Pods-Junto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,8 +131,8 @@
 		618EC7AA1F3B70A90016CE65 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				618EC79B1F3B70440016CE65 /* Main.storyboard */,
-				618EC7A01F3B70440016CE65 /* LaunchScreen.storyboard */,
+				61980E461F3CEC8C004BF6AC /* Main.storyboard */,
+				61980E441F3CEC82004BF6AC /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				618EC7A21F3B70440016CE65 /* LaunchScreen.storyboard in Resources */,
+				61980E451F3CEC82004BF6AC /* LaunchScreen.storyboard in Resources */,
 				618EC79F1F3B70440016CE65 /* Assets.xcassets in Resources */,
-				618EC79D1F3B70440016CE65 /* Main.storyboard in Resources */,
+				61980E471F3CEC8C004BF6AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,27 +290,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		618EC79B1F3B70440016CE65 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				618EC79C1F3B70440016CE65 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		618EC7A01F3B70440016CE65 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				618EC7A11F3B70440016CE65 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		618EC7A41F3B70440016CE65 /* Debug */ = {

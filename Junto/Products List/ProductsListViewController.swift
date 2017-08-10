@@ -14,18 +14,17 @@ class ProductsListViewController: UIViewController {
     @IBOutlet weak var tableViewProducts: UITableView!
     @IBOutlet weak var labelNoProducts: UILabel!
     
-    var products: [Product] = []
+    fileprivate var products: [Product] = []
     
-    let categories = [Category.tech.rawValue, Category.games.rawValue,
-                      Category.podcasts.rawValue, Category.books.rawValue]
+    private let categories = Category.all.map { $0.rawValue }
     
-    let activityIndicatorInitialLoading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    private let activityIndicatorInitialLoading = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
-    var selectedCategory: Category = .tech
+    private var selectedCategory: Category = .tech
     
-    var selectedProduct: Product?
+    fileprivate var selectedProduct: Product?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -36,9 +35,10 @@ class ProductsListViewController: UIViewController {
         menuView.navigationBarTitleFont = font
         menuView.cellTextLabelFont = font
         menuView.arrowTintColor = .black
-        self.navigationItem.titleView = menuView
+        navigationItem.titleView = menuView
         
-        menuView.didSelectItemAtIndexHandler = { (indexPath: Int) -> () in
+        menuView.didSelectItemAtIndexHandler = { [weak self] (indexPath: Int) -> () in
+            guard let `self` = self else { return }
             self.selectedCategory = Category.all[indexPath]
             self.startSpinning()
             self.updateProducts(category: self.selectedCategory) {
@@ -55,8 +55,8 @@ class ProductsListViewController: UIViewController {
         tableViewProducts.refreshControl = refreshControl
         
         startSpinning()
-        updateProducts(category: Category.tech) {
-            self.stopSpinning()
+        updateProducts(category: Category.tech) { [weak self] in
+            self?.stopSpinning()
         }
     }
     
@@ -64,8 +64,8 @@ class ProductsListViewController: UIViewController {
     func startSpinning() {
         tableViewProducts.isHidden = true
         
-        activityIndicatorInitialLoading.center = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
-        self.view.addSubview(activityIndicatorInitialLoading)
+        activityIndicatorInitialLoading.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2)
+        view.addSubview(activityIndicatorInitialLoading)
         activityIndicatorInitialLoading.startAnimating()
     }
     
@@ -77,8 +77,9 @@ class ProductsListViewController: UIViewController {
 
     // MARK: - Data updates
     func updateProducts(category: Category, completion: @escaping () -> Void) {
-        self.labelNoProducts.isHidden = true
-        ProductsApiManager.shared.getProducts(category: category) { products in
+        labelNoProducts.isHidden = true
+        ProductsApiManager.shared.getProducts(category: category) { [weak self] products in
+            guard let `self` = self else { return }
             self.products = products
             if products.count > 0 {
                 self.tableViewProducts.isHidden = false

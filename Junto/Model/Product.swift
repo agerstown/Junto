@@ -8,14 +8,23 @@
 
 import Foundation
 
+enum Category: String {
+    case tech
+    case games
+    case podcasts
+    case books
+    
+    static let all = [tech, games, podcasts, books]
+}
+
 class Product {
     
-    var name: String
-    var tagline: String
-    var votesCount: Int
-    var thumbnailURL: String
-    var redirectURL: String
-    var screenshotURL: String
+    let name: String
+    let tagline: String
+    let votesCount: Int
+    let thumbnailURL: String
+    let redirectURL: String
+    let screenshotURL: String
     
     init(name: String, tagline: String, votesCount: Int, thumbnailURL: String, redirectURL: String, screenshotURL: String) {
         self.name = name

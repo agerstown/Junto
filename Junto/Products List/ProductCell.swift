@@ -14,4 +14,5 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelTagline: UILabel!
     @IBOutlet weak var labelVotesCount: UILabel!
+    
 }
