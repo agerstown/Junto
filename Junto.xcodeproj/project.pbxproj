@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B8CA0C6ACDBFC8554FE77F8 /* Pods_Junto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6B4D0961A014D1C595BD15 /* Pods_Junto.framework */; };
 		615F97791F3B752F00525B82 /* ProductsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F97781F3B752F00525B82 /* ProductsApiManager.swift */; };
-		615F977B1F3B88B700525B82 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977A1F3B88B700525B82 /* Post.swift */; };
+		615F977B1F3B88B700525B82 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977A1F3B88B700525B82 /* Product.swift */; };
 		615F977D1F3B8E2D00525B82 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977C1F3B8E2D00525B82 /* ProductCell.swift */; };
 		615F97801F3B90E300525B82 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */; };
 		618EC7981F3B70430016CE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC7971F3B70430016CE65 /* AppDelegate.swift */; };
@@ -25,7 +25,7 @@
 		0B6B4D0961A014D1C595BD15 /* Pods_Junto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Junto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF63CEA0A6A1F8D04DDA629 /* Pods-Junto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Junto/Pods-Junto.debug.xcconfig"; sourceTree = "<group>"; };
 		615F97781F3B752F00525B82 /* ProductsApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsApiManager.swift; sourceTree = "<group>"; };
-		615F977A1F3B88B700525B82 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		615F977A1F3B88B700525B82 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		615F977C1F3B8E2D00525B82 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = ../Products/ProductCell.swift; sourceTree = "<group>"; };
 		615F977F1F3B90E300525B82 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		618EC7941F3B70430016CE65 /* Junto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Junto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +123,7 @@
 		618EC7A91F3B70940016CE65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				615F977A1F3B88B700525B82 /* Post.swift */,
+				615F977A1F3B88B700525B82 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				618EC7981F3B70430016CE65 /* AppDelegate.swift in Sources */,
 				615F977D1F3B8E2D00525B82 /* ProductCell.swift in Sources */,
 				618EC7B11F3B718D0016CE65 /* ProductsListViewController.swift in Sources */,
-				615F977B1F3B88B700525B82 /* Post.swift in Sources */,
+				615F977B1F3B88B700525B82 /* Product.swift in Sources */,
 				61F79EA41F3BA1FF00233549 /* ImagesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,8 +12,9 @@ import BTNavigationDropdownMenu
 class ProductsListViewController: UIViewController {
     
     @IBOutlet weak var tableViewProducts: UITableView!
+    @IBOutlet weak var labelNoProducts: UILabel!
     
-    var products: [Post] = []
+    var products: [Product] = []
     
     let categories = [Category.tech.rawValue, Category.games.rawValue,
                       Category.podcasts.rawValue, Category.books.rawValue]
@@ -23,6 +24,8 @@ class ProductsListViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     
     var selectedCategory: Category = .tech
+    
+    var selectedProduct: Product?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -74,8 +77,16 @@ class ProductsListViewController: UIViewController {
 
     // MARK: - Data updates
     func updateProducts(category: Category, completion: @escaping () -> Void) {
-        ProductsApiManager.shared.getProducts(category: category) { posts in
-            self.products = posts
+        self.labelNoProducts.isHidden = true
+        ProductsApiManager.shared.getProducts(category: category) { products in
+            self.products = products
+            if products.count > 0 {
+                self.tableViewProducts.isHidden = false
+            } else {
+                self.labelNoProducts.isHidden = false
+                self.tableViewProducts.isHidden = true
+                self.labelNoProducts.text = "No " + self.selectedCategory.rawValue + " for today :("
+            }
             self.tableViewProducts.reloadData()
             completion()
         }
@@ -86,10 +97,18 @@ class ProductsListViewController: UIViewController {
             refreshControl.endRefreshing()
         }
     }
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? ProductViewController {
+            controller.product = selectedProduct
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension ProductsListViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
@@ -100,7 +119,7 @@ extension ProductsListViewController: UITableViewDataSource {
         
         let cell = tableViewProducts.dequeue(ProductCell.self)
         cell.imageViewThumbnail.image = #imageLiteral(resourceName: "default_product")
-        ImagesManager.shared.loadImage(withURL: product.thumbnailLink, intoImageView: cell.imageViewThumbnail)
+        ImagesManager.shared.loadImage(withURL: product.thumbnailURL, intoImageView: cell.imageViewThumbnail)
         cell.labelName.text = product.name
         cell.labelTagline.text = product.tagline
         cell.labelVotesCount.text = String(product.votesCount)
@@ -111,5 +130,11 @@ extension ProductsListViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ProductsListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedProduct = products[indexPath.row]
+        performSegue(withIdentifier: "segueToProductViewController", sender: nil)
+        tableViewProducts.deselectRow(at: indexPath, animated: false)
+    }
     
 }

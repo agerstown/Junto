@@ -27,7 +27,7 @@ class ProductsApiManager {
     let token = "591f99547f569b05ba7d8777e2e0824eea16c440292cce1f8dfb3952cc9937ff"
     
     // MARK: - GET methods
-    func getProducts(category: Category, completion: @escaping (_ posts: [Post]) -> Void) {
+    func getProducts(category: Category, completion: @escaping (_ products: [Product]) -> Void) {
 
         let parameters: Parameters = [
             "days_ago": 0
@@ -37,24 +37,27 @@ class ProductsApiManager {
             "Authorization": "Bearer \(token)"
         ]
         
-        var posts: [Post] = []
+        var products: [Product] = []
         
         Alamofire.request(host + "/v1/categories/" + category.rawValue + "/posts", method: .get, parameters: parameters,
                           headers: headers).responseJSON { response in
             if let value = response.result.value {
-                let postsJSON = JSON(value)["posts"]
-                for (_, post) in postsJSON {
+                let posts = JSON(value)["posts"]
+                for (_, post) in posts {
                     
                     let name = post["name"].stringValue
                     let tagline = post["tagline"].stringValue
                     let votesCount = post["votes_count"].intValue
-                    let thumbnailLink = post["thumbnail"]["image_url"].stringValue
-                    print(thumbnailLink)
+                    let thumbnailURL = post["thumbnail"]["image_url"].stringValue
+                    let redirectURL = post["redirect_url"].stringValue
+                    print(post["screenshot_url"])
+                    let screenshotURL = post["screenshot_url"]["300px"].stringValue
                     
-                    let postObj = Post(name: name, tagline: tagline, votesCount: votesCount, thumbnailLink: thumbnailLink)
-                    posts.append(postObj)
+                    let product = Product(name: name, tagline: tagline, votesCount: votesCount,
+                                       thumbnailURL: thumbnailURL, redirectURL: redirectURL, screenshotURL: screenshotURL)
+                    products.append(product)
                 }
-                completion(posts)
+                completion(products)
             }
         }
     }
